@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="box1" class="box">
+            <h1>private limited company</h1>
+            <div class="rupee">
+                <h2 class="header">Starting</h2>
+                <h1>$299</h1>
+                <a href="jobs">.govt fees</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero animi sit perferendis amet, hic at ea!
+                Possimus deleniti nesciunt at maxime distinctio. Asperiores vel nemo ipsam, sunt odit totam facilis
+                aliquid exercitationem nihil. Quasi.</p>
+            <a href="fact">Know More</a>
+        </div>
+        <div id="box2" class="box">
+            <h1>limited liability partnership</h1>
+            <div class="rupee">
+                <h2 class="header">Starting</h2>
+                <h1>$299</h1>
+                <!-- <h3>.statutory fees</h3> -->
+                <a href="jobs">.govt fees</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero animi sit perferendis amet, hic at ea!
+                Possimus deleniti nesciunt at maxime distinctio. Asperiores vel nemo ipsam, sunt odit totam facilis
+                aliquid exercitationem nihil. Quasi.</p>
+            <a href="fact">Know More</a>
+        </div>
+        <div id="box3" class="box">
+            <h1>One person company</h1>
+            <div class="rupee">
+                <h2 class="header">Starting</h2>
+                <h1>$5998</h1>
+                <a href="jobs">.all inclusive</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero animi sit perferendis amet, hic at ea!
+                Possimus deleniti nesciunt at maxime distinctio. Asperiores vel nemo ipsam, sunt odit totam facilis
+                aliquid exercitationem nihil. Quasi.</p>
+            <a href="fact">Know More</a>
+        </div>
+        <div id="box4" class="box">
+            <h1>Partnership farm</h1>
+            <div class="rupee">
+                <h2 class="header">Starting</h2>
+                <h1>$299</h1>
+                <a href="jobs">.statutory fees</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero animi sit perferendis amet, hic at ea!
+                Possimus deleniti nesciunt at maxime distinctio. Asperiores vel nemo ipsam, sunt odit totam facilis
+                aliquid exercitationem nihil. Quasi.</p>
+            <a href="know more">Know More</a>
+        </div>
+    </div>
+    <div id="changer">
+        <div class="btn"><img src="./app/dot_PNG26.png" id="1" alt="#"></div>
+        <div class="btn"><img src="./app/images.jpeg" id="2" alt="#"></div>
+        <div class="btn"><img src="./app/images.jpeg" id="3" alt="#"></div>
+        <div class="btn"><img src="./app/images.jpeg" id="4" alt="#"></div>
+    </div>
+
+</body>
+<script>
+    document.querySelectorAll('.btn').forEach(element => {
+        element.addEventListener('click', function (e) {
+            document.querySelectorAll('.box').forEach(element => {
+                element.style.display = 'none';
+            });
+            let id = e.target.id;
+            for (let index = 1; index < 5; index++) {
+                document.getElementById(`${index}`).src = "./app/images.jpeg";
+            }
+            document.getElementById(`${id}`).src = "./app/dot_PNG26.png";
+            document.getElementById('box' + `${id}`).style.display = 'flex';
+        })
+    });
+
+</script>
+
+</html>
